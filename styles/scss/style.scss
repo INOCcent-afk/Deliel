@@ -145,10 +145,12 @@ body {
 }
 
 .textt {
-  font-family: $grtsk, sans-serif;
-  font-weight: lighter;
-  font-size: 54px;
-  pointer-events: none;
+  h1 {
+    font-family: $grtsk, sans-serif;
+    font-weight: lighter;
+    font-size: 54px;
+    pointer-events: none;
+  }
 }
 
 .text-1,
@@ -319,7 +321,7 @@ body {
 
   .logo,
   .menu {
-    font-size: 0.5em;
+    font-size: 8px;
     cursor: pointer;
     color: #ffffff;
   }
@@ -357,7 +359,7 @@ body {
     top: 80%;
     transform: translate(-50%, -80%);
     color: rgb(255, 255, 255);
-    font-size: 1.5em;
+    font-size: 24px;
     background: linear-gradient(to right, #fff, #fff 50%, transparent 50%);
     background-clip: text;
     -webkit-text-stroke-width: 1px;
@@ -368,7 +370,7 @@ body {
     background-position: 100%;
     transition: background-position 275ms ease;
     text-decoration: none;
-    animation: animate 10s ease infinite forwards;
+    // animation: animate 10s ease infinite forwards;
     text-align: center;
   }
 }
@@ -432,8 +434,7 @@ body {
   &-footer {
     color: #ff9900;
     font-family: Audiowide;
-    font-size: 1.5em;
-
+    font-size: 24px;
     z-index: 5;
 
     span {
@@ -483,7 +484,6 @@ body {
       margin: 0;
       font-size: 80px;
       width: 100%;
-
       text-align: center;
       position: absolute;
       top: 50%;
@@ -496,7 +496,7 @@ body {
     span {
       position: relative;
       display: block;
-      line-height: 3.2em;
+      line-height: 250px;
     }
 
     span:nth-child(1) {
@@ -536,10 +536,10 @@ body {
     background-position: 100%;
     transition: background-position 275ms ease;
     text-decoration: none;
-    animation: animate 3s ease infinite forwards;
+    // animation: animate 3s ease infinite forwards;
 
     &-border {
-      width: 0%;
+      width: 100%;
       height: 2px;
       position: absolute;
       background: #fff;
@@ -651,7 +651,7 @@ body {
     color: #f2f2f2;
     font-family: sans-serif;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 24px;
   }
 
   .project {
@@ -687,7 +687,7 @@ body {
   font-family: $gta-m, sans-serif;
   @include flex();
   white-space: nowrap;
-  font-size: 0.8em;
+  font-size: 12.8px;
   overflow-x: hidden;
 
   z-index: 1;
@@ -818,7 +818,7 @@ body {
         background-color: #ff9900;
         font-family: $gta-m, sans-serif;
         color: #000;
-        font-size: 1.8em;
+        font-size: 28.8px;
         cursor: pointer;
       }
     }
@@ -844,7 +844,7 @@ body {
 
   &-closeBtn {
     margin-left: auto;
-    font-size: 2em;
+    font-size: 32px;
     color: #fff;
     cursor: pointer;
     outline: none;
@@ -858,12 +858,12 @@ body {
     outline: none;
     color: #fff;
     font-family: $grtsk;
-    font-size: 1.2em;
+    font-size: 19.2px;
     border-bottom: 1px solid #fff;
   }
   ::placeholder {
     color: #fff;
-    font-size: 0.8em;
+    font-size: 12.8px;
   }
   input[type="submit"] {
     width: 150px;
@@ -874,7 +874,7 @@ body {
     background: #107bde;
     color: #fff;
     font-family: $gta-r;
-    font-size: 1.5em;
+    font-size: 24px;
   }
 }
 
@@ -885,7 +885,7 @@ body {
   color: #fff;
 
   &-title {
-    font-size: 1.2em;
+    font-size: 19.2px;
     min-height: 30%;
     max-width: 600px;
     padding: 150px 5% 5% 5%;
@@ -894,7 +894,7 @@ body {
 
   &-content {
     font-family: $gta-r;
-    font-size: 0.5em;
+    font-size: 8px;
     padding: 30px 5%;
   }
 
@@ -914,6 +914,12 @@ body {
 // MEDIA QUERIES
 
 @media (min-width: 800px) {
+  .first-hero {
+    &-content {
+      animation: animate 10s ease infinite forwards;
+    }
+  }
+
   .menu {
     display: none;
   }
@@ -1023,6 +1029,15 @@ body {
       }
     }
   }
+  .slogan-container {
+    .slogan {
+      animation: animate 3s ease infinite forwards;
+
+      &-border {
+        width: 0%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1038,13 +1053,13 @@ body {
       max-width: 800px;
 
       .text {
-        font-size: 10em;
+        font-size: 160px;
       }
 
       span {
         position: relative;
         display: block;
-        line-height: 2em;
+        line-height: 250px;
       }
       span:nth-child(1) {
         left: -40%;
@@ -1075,7 +1090,7 @@ body {
 
   .projects-container {
     .projects-title {
-      font-size: 3em;
+      font-size: 48px;
     }
     .left-project {
       margin-left: auto;
@@ -1083,7 +1098,7 @@ body {
 
     .project {
       &-footer {
-        font-size: 0.8em;
+        font-size: 12.8px;
       }
     }
   }

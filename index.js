@@ -155,77 +155,77 @@ function animations() {
 
       .setTween(tl2)
       .addTo(controller2);
+
+    // ***********
+    const tl3 = new TimelineLite();
+
+    tl3.to(".quote1", 2, {
+      transform: "translateX(-50%)",
+      ease: Power4.easeOut,
+    });
+    const controller3 = new ScrollMagic.Controller();
+
+    const scene3 = new ScrollMagic.Scene({
+      triggerElement: ".quotes-container",
+      duration: 1000,
+      triggerHook: 0.5,
+    })
+      .setTween(tl3)
+      .addTo(controller3);
+    // ***********
+    const tl4 = new TimelineLite();
+
+    tl4.to(".quote2", 2, {
+      transform: "translateX(-10%)",
+      ease: Power4.easeOut,
+    });
+
+    const controller4 = new ScrollMagic.Controller();
+
+    const scene4 = new ScrollMagic.Scene({
+      triggerElement: ".quotes-container",
+      duration: 1000,
+      triggerHook: 0.5,
+    })
+      .setTween(tl4)
+      .addTo(controller4);
+    // ***********
+    const tl5 = new TimelineLite();
+
+    tl5.to(".quote3", 2, {
+      transform: "translateX(-50%)",
+      ease: Power4.easeOut,
+    });
+
+    const controller5 = new ScrollMagic.Controller();
+
+    const scene5 = new ScrollMagic.Scene({
+      triggerElement: ".quotes-container",
+      duration: 1000,
+      triggerHook: 0.5,
+    })
+      .setTween(tl5)
+      .addTo(controller5);
+
+    // *******************
+    const tl6 = new TimelineLite();
+
+    tl6.to(".slogan-border", 1, {
+      width: "100%",
+      ease: Power4.easeOut,
+    });
+
+    const controller6 = new ScrollMagic.Controller();
+
+    const scene6 = new ScrollMagic.Scene({
+      triggerElement: ".slogan-container",
+      duration: 2000,
+      triggerHook: 0.5,
+    })
+      .setTween(tl6)
+      .addTo(controller6);
   }
-  // ***********
-  const tl3 = new TimelineLite();
-
-  tl3.to(".quote1", 2, {
-    transform: "translateX(-50%)",
-    ease: Power4.easeOut,
-  });
-  const controller3 = new ScrollMagic.Controller();
-
-  const scene3 = new ScrollMagic.Scene({
-    triggerElement: ".quotes-container",
-    duration: 1000,
-    triggerHook: 0.5,
-  })
-    .setTween(tl3)
-    .addTo(controller3);
-  // ***********
-  const tl4 = new TimelineLite();
-
-  tl4.to(".quote2", 2, {
-    transform: "translateX(-10%)",
-    ease: Power4.easeOut,
-  });
-
-  const controller4 = new ScrollMagic.Controller();
-
-  const scene4 = new ScrollMagic.Scene({
-    triggerElement: ".quotes-container",
-    duration: 1000,
-    triggerHook: 0.5,
-  })
-    .setTween(tl4)
-    .addTo(controller4);
-  // ***********
-  const tl5 = new TimelineLite();
-
-  tl5.to(".quote3", 2, {
-    transform: "translateX(-50%)",
-    ease: Power4.easeOut,
-  });
-
-  const controller5 = new ScrollMagic.Controller();
-
-  const scene5 = new ScrollMagic.Scene({
-    triggerElement: ".quotes-container",
-    duration: 1000,
-    triggerHook: 0.5,
-  })
-    .setTween(tl5)
-    .addTo(controller5);
 }
-
-// *******************
-const tl6 = new TimelineLite();
-
-tl6.to(".slogan-border", 1, {
-  width: "100%",
-  ease: Power4.easeOut,
-});
-
-const controller6 = new ScrollMagic.Controller();
-
-const scene6 = new ScrollMagic.Scene({
-  triggerElement: ".slogan-container",
-  duration: 2000,
-  triggerHook: 0.5,
-})
-  .setTween(tl6)
-  .addTo(controller6);
-
 // *******************
 
 const preLoader = document.querySelector(".preloader-container");
@@ -300,7 +300,7 @@ barba.init({
       async enter(data) {
         let from = data.next.url.path;
 
-        if (from === "/contact.html") {
+        if (from === "/project-1/contact.html") {
           contacts();
           contentAnimation();
         } else {
@@ -311,7 +311,7 @@ barba.init({
       async once(data) {
         let from = data.next.url.path;
 
-        if (from === "/contact.html") {
+        if (from === "/project-1/contact.html") {
           contacts();
 
           contentAnimation();
