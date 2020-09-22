@@ -300,7 +300,7 @@ barba.init({
       async enter(data) {
         let from = data.next.url.path;
 
-        if (from === "/project-1/contact.html") {
+        if (from === "/Deliel/contact.html") {
           contacts();
           contentAnimation();
         } else {
@@ -311,7 +311,7 @@ barba.init({
       async once(data) {
         let from = data.next.url.path;
 
-        if (from === "/project-1/contact.html") {
+        if (from === "/Deliel/contact.html") {
           contacts();
 
           contentAnimation();
